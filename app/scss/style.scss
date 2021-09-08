@@ -1,0 +1,543 @@
+@import url('https://db.onlinewebfonts.com/c/1c45e28f8e86cc89876f003b953cc3e9?family=SF+Pro+Text');
+//font-family: "SF Pro Text", sans-serif;
+@import url('https://db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display');
+//font-family: "SF Pro Display"
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.team{
+  background: linear-gradient(225deg, #542285 0%, #222266 100%);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+
+  &:hover{
+    background: linear-gradient(225deg, #542285 0%, #010115 100%);
+
+  }
+}
+.owl-dots{
+  display: none;
+}
+.container {
+  max-width: 414px;
+  margin: 0 auto;
+}
+.close{
+  height: 32px;
+  width: 32px;
+  background: rgba(255, 255, 255, 0.527344) url("../images/owla.png") no-repeat center;
+  border-radius: 100%;
+  position: relative;
+  &:after , &:before  {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 70%;
+    position: absolute;
+    transform-origin: center;
+    background:#6b48bd;
+    border-radius: 94px;
+  }
+  &:after{
+    top: 50%;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+  &:before{
+    top: 50%;
+    left: 5px;
+    transform: rotate(-45deg);
+  }
+}
+.header{
+  background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+  padding-top: 80px;
+  padding-bottom: 70px;
+  position: relative;
+  &__title{
+    font-family: "SF Pro Display", sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 0.37px;
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 33px;
+  }
+  &__close-position{
+    position: absolute;
+    right: 13px;
+    top: 48px;
+  }
+  &__border{
+    border: 1px solid white;
+    //border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.690068) 48.69%, rgba(255, 255, 255, 0.0001) 100%);
+    //height: 1px;
+    mix-blend-mode: overlay;
+    opacity: 0.76;
+    border-radius: 100%;
+  }
+  &__list-content{
+    padding: 16px 0 17px 42px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    font-family: "SF Pro Text", sans-serif;
+    margin: 0;
+  }
+  &__list{
+    position: relative;
+  }
+  &__line{
+    position: absolute;
+    path{
+      animation: ddd 1s linear;
+    }
+  }
+
+  &__badge{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: visible 6s;
+
+  }
+  &__badge-position-red{
+    right: 1.83%;
+    top: 15.44%;
+  }
+  &__badge-position-green{
+    right: 1.83%;
+    top: 64.44%;
+  }
+  &__badge-bg-read{
+    background-color: red;
+  }
+  &__badge-bg-green{
+    background-color: #04CD00;
+  }
+  &__badge-text{
+    padding: 6px 7px 7px 9px;
+    border-radius: 40px 40px 40px 40px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(90, 0, 124, 0.258332);
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    font-family: "SF Pro Display", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-bottom: 6px;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 5px) ;
+      display: block;
+      border: 5px solid transparent;
+      border-top: solid 5px white;
+    }
+  }
+  &__animate{
+    animation: pulse 3s infinite;
+  }
+  &__badge-img{
+    margin-left: 3px;
+    width:8.48px;
+    height: 11.76px;
+
+  }
+  &__badge-point{
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border: solid 3px white;
+  }
+  &__image-container{
+    position: absolute;
+    top: -41px;
+    left: 45%;
+    z-index: 10;
+  }
+  &__line-desc{
+    display: block;
+  }
+  &__line-min{
+    display: none;
+  }
+  @media all and (max-width: 375px){
+    &{
+      padding-bottom: 54px;
+      padding-top: 56px;
+    }
+    &__close-position{
+      top: 23px;
+    }
+    &__title{
+      margin-bottom: 19px;
+    }
+    &__line-two{
+      top: -5px
+    }
+    &__badge-position-red{
+      top: 12.44%;
+      right: 7.83%;
+
+    }
+    &__badge-position-green{
+      top: 57.44%;
+      right: 7.83%;
+    }
+    &__list-content{
+      padding: 15px 0 15px 20px;
+    }
+    &__image-container{
+      top: -32px;
+    }
+    &__image{
+      height: 246px;
+    }
+  }
+  @media all and (max-width: 320px){
+    &{
+      padding-bottom: 40px;
+      padding-top: 35px;
+    }
+    &__close-position{
+      top: 25px;
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 41px;
+      margin-bottom: 8px;
+    }
+    &__line-two{
+      top: 0
+    }
+    &__badge-position-red{
+      top: 0.44%;
+    }
+    &__badge-position-green{
+      top: 49.44%;
+    }
+    &__list-content{
+      padding: 3px 0 6px 20px;
+    }
+    &__image-container{
+      top: -23px;
+    }
+    &__image{
+      height: 140px;
+    }
+    &__line-desc{
+      display: none;
+    }
+    &__line-min{
+      display: block;
+    }
+  }
+
+}
+.carousel{
+  margin-top: -30px;
+  margin-bottom: 30px;
+  &__item{
+    //width: 374px;
+    height: 145px;
+    max-width: 374px;
+    margin: 0 auto;
+    background: #F3F2F9;
+    backdrop-filter: blur(9.06094px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 10px;
+    padding: 20px 25px 24px 20px;
+  }
+  &__item-title{
+    color: #1A1A1A;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "SF Pro Text", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__item-name{
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  &__grade{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  &__grade-item{
+    width: 21px;
+    height: 21px;
+    background: url("../images/grade.png") no-repeat center;
+    margin-right: 4px;
+  }
+  &__item-text{
+    color: #1A1A1A;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "SF Pro Text", sans-serif;
+  }
+  @media all and (max-width: 375px){
+    &{
+      margin-bottom: 0;
+    }
+    &__item{
+      max-width: 335px;
+    }
+  }
+  @media all and (max-width: 320px){
+    &{
+      margin-bottom: 3px;
+    }
+    &__item{
+      max-width: 280px;
+      padding: 15px 25px 12px 20px;
+      height: auto;
+    }
+    &__item-title{
+      margin-bottom: 7px;
+    }
+    &__grade{
+      margin-bottom: 9px;
+    }
+  }
+}
+.price{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+  padding: 0 20px;
+  &__container{
+    background: #F3F2F9;
+    backdrop-filter: blur(9.06094px);
+    min-height: 151px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 6px;
+  }
+  &__container-top{
+    padding: 6px 11px;
+    height: 100%;
+  }
+  &__item{
+    border-radius: 5px;
+    width: 100%;
+    max-width: 118px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: "SF Pro Text", sans-serif;
+    margin-bottom: 12px;
+  }
+  &__month{
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.354546px;
+    font-family: "SF Pro Text", sans-serif;
+    color: #000000;
+    margin-bottom: 6px;
+  }
+  &__save-80{
+    background: #FCBF59;
+    backdrop-filter: blur(9.06094px);
+  }
+  &__save-90{
+    background: #FCA759;
+    backdrop-filter: blur(9.06094px);
+  }
+  &__save-active{
+    text-align: center;
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 15px;
+    color: #1A1A1A;
+    font-family: "SF Pro Text", sans-serif;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+
+    padding: 5px 0;
+    /* Note: backdrop-filter has minimal browser support */
+  }
+  &__sale{
+    background: #FCA759;
+    backdrop-filter: blur(9.06094px);
+    border-radius: 0 0 5px 5px;
+    /* Note: backdrop-filter has minimal browser support */
+
+    text-align: center;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    font-size: 9px;
+    line-height: 15px;
+    color: #1A1A1A;
+    font-family: "SF Pro Text", sans-serif;
+  }
+  @media all and (max-width: 375px) {
+    &{
+      margin-bottom: 35px;
+    }
+    &__item{
+      max-width: 105px;
+    }
+    &__title{
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+    &__container{
+      min-height: 131px;
+    }
+  }
+  @media all and (max-width: 320px) {
+    &{
+     margin-bottom: 13px;
+    }
+    &__item{
+      max-width: 88px;
+    }
+    &__title{
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+    &__month{
+      font-size: 11px;
+      line-height: 13px;
+      margin-bottom: 3px;
+      letter-spacing: -0.3px;
+    }
+    &__container{
+      max-height: 112px;
+    }
+  }
+}
+.price-active{
+  background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+  backdrop-filter: blur(9.06094px);
+  h2,p {
+    color: white;
+  }
+}
+.footer{
+  &__container{
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  &__btn{
+    display: block;
+    background: linear-gradient(225deg, #542285 0%, #222266 100%);
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 0.0352px;
+    font-size: 22px;
+    line-height: 28px;
+    font-family: "SF Pro Text", sans-serif;
+    text-decoration: none;
+    padding: 11px 0;
+  }
+  &__signature{
+    text-align: center;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    font-family: "SF Pro Text", sans-serif;
+    margin-bottom: 26px;
+  }
+  &__last{
+    background: #000000;
+    border-radius: 100px;
+    height: 5px;
+    width: 134px;
+    margin: 0 auto;
+  }
+  @media all and (max-width: 320px) {
+    &__signature{
+      margin: 0;
+    }
+    &__last{
+      display: none;
+    }
+  }
+}
+.dark-team{
+  background: #000000;
+  .carousel__item{
+    background: linear-gradient(225deg, #262526 0%, #19181A 100%);
+    border-radius: 10px;
+  }
+  .carousel__item-title , .carousel__item-text{
+    color: white;
+  }
+  .price__container{
+    background: #373640;
+    backdrop-filter: blur(9.06094px);
+  }
+  .price__title , .price__month{
+    color: white;
+  }
+  .price-active{
+    background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+    backdrop-filter: blur(9.06094px);
+    h2,p {
+      color: white;
+    }
+  }
+}
+@keyframes visible {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {transform: scale(1)}
+  20% {transform: scale(1.1)}
+  40%{transform: scale(1)}
+  60%{transform: scale(1.1)}
+  100%{transform: scale(1)}
+}
+
+@keyframes ddd {
+  from { stroke-dasharray:0 }
+  to { stroke-dasharray: 414 }
+}
